@@ -14,7 +14,9 @@ def hello_world():
 def parakee():
     colors = [
         ['334D5C', 'DF5A49'],
-        ['e67e22', '16828c']
+        ['e67e22', '16828c'],
+        ['A8CD1B', '005A31'],
+        ['2ECC71', 'FF6666']
     ]
     return render_template('parakee.html', colors=colors)
 
