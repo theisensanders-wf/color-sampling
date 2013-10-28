@@ -23,24 +23,26 @@
 
         body {
             background-color: {{ primary }};
-            color: #333333;
         }
 
         .jumbotron {
             background-color: transparent;
+            text-align: center;
+            margin-top: 80px;
         }
 
         .jumbotron h1 {
             color: {{ secondary }};
+            font-size: 90px;
         }
 
         .jumbotron p {
             color: #333333;
+            font-size: 30px;
         }
 
         .jumbotron .btn {
             border: none;
-            margin-top: 20px;
             padding: 20px 100px;
             border-radius: 0;
             background-color: {{ secondary }};
@@ -57,8 +59,7 @@
 
     <div class="jumbotron">
         <h1>Example Application</h1>
-
-        <p class="lead">Primary: {{ primary }}; Secondary: {{ secondary }}<br></p>
+        <p class="lead">For Sale: Parachute. Only used once, never opened.</p>
         <btn class="btn btn-large btn-primary">Test</btn>
     </div>
 
