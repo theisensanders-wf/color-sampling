@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parakee</title>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    <link href="../static/css/bootstrap.css" rel="stylesheet">
+
+    <style>
+        head, body, img {
+            width: 100%;
+        }
+
+        html {
+            padding: 30px;
+            font-family: 'PT Sans', sans-serif;
+        }
+
+        .logo {
+            padding: 40px 0;
+            text-align: center;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .logo svg {
+            width: 80%;
+        }
+
+        #custom-logo-container {
+            border: 1px solid #333333;
+            border-radius: 10px;
+            padding: 10px 20px;
+            margin-bottom: 100px;
+        }
+
+        #custom-logo-container .logo svg {
+
+        }
+    </style>
+</head>
+<body>
+
+<div id="custom-logo-container">
+    <h3>Custom Bird:</h3>
+    Body: <input type="text" id="body" placeholder="334D5C">
+    Wing/Beak: <input type="text" id="wing" placeholder="e67e22">
+    <button class="btn" id="submit">Submit</button>
+
+
+    <div id="custom-logo" class="logo">
+        <a href="http://color-sampling.herokuapp.com/?primary=334D5C&amp;secondary=DF5A49">
+            <svg width="647px" height="318px" viewBox="0 0 647 318" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                <title>parakee</title>
+                <description>Created with Sketch (http://www.bohemiancoding.com/sketch)
+                </description>
+                <defs></defs>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                    <path d="M37.7255192,132.623319 C27.192813,132.623319 18.5851164,141.47218 18,152.623319 L57.4510383,152.623319 C56.8659219,141.47218 48.2582253,132.623319 37.7255192,132.623319 Z M37.7255192,132.623319" id="Bottom-Beak" fill="#DF5A49" sketch:type="MSShapeGroup" transform="translate(37.725519, 142.623319) scale(1, -1) translate(-37.725519, -142.623319) "></path>
+                    <path d="M31.7255192,98 C14.7852517,98 0.941071376,113.485508 0,133 L63.4510383,133 C62.5099669,113.485508 48.6657866,98 31.7255192,98 Z M31.7255192,98" id="Top-Beak" fill="#DF5A49" sketch:type="MSShapeGroup"></path>
+                    <path d="M209,87.5 C209,160.953875 307.049634,220.5 428,220.5 C548.950366,220.5 647,160.953875 647,87.5" id="Bottom-Wing" fill="#334D5C" sketch:type="MSShapeGroup" transform="translate(428.000000, 154.000000) rotate(-180.000000) translate(-428.000000, -154.000000) "></path>
+                    <path d="M33,124 C33,231.143247 159.255693,318 315,318 C470.744307,318 597,231.143247 597,124" id="Body" fill="#334D5C" sketch:type="MSShapeGroup"></path>
+                    <path d="M154.5,233 C221.6026,233 276,180.841177 276,116.5 C276,52.1588235 221.6026,0 154.5,0 C87.3973996,0 33,52.1588235 33,116.5 C33,180.841177 87.3973996,233 154.5,233 Z M87.5,113 C97.1649836,113 105,105.164984 105,95.5 C105,85.8350164 97.1649836,78 87.5,78 C77.8350164,78 70,85.8350164 70,95.5 C70,105.164984 77.8350164,113 87.5,113 Z M87.5,105 C92.7467054,105 97,100.746705 97,95.5 C97,90.2532946 92.7467054,86 87.5,86 C82.2532946,86 78,90.2532946 78,95.5 C78,100.746705 82.2532946,105 87.5,105 Z M87.5,105" id="Head" fill="#334D5C" sketch:type="MSShapeGroup"></path>
+                    <path d="M209,52 C209,125.453875 307.049634,185 428,185 C548.950366,185 647,125.453875 647,52" id="Top-Wing" fill="#DF5A49" sketch:type="MSShapeGroup"></path>
+                </g>
+            </svg>
+        </a>
+    </div>
+</div>
+
+<h1>Top Birds</h1>
+{% for color in colors %}
+    <div class="logo">
+        <a href="http://color-sampling.herokuapp.com/?primary=334D5C&amp;secondary={{ color[1] }}">
+            <svg width="647px" height="318px" viewBox="0 0 647 318" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                <title>parakee</title>
+                <description>Created with Sketch (http://www.bohemiancoding.com/sketch)
+                </description>
+                <defs></defs>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                    <path d="M37.7255192,132.623319 C27.192813,132.623319 18.5851164,141.47218 18,152.623319 L57.4510383,152.623319 C56.8659219,141.47218 48.2582253,132.623319 37.7255192,132.623319 Z M37.7255192,132.623319" id="Bottom-Beak" fill="#{{ color[1] }}" sketch:type="MSShapeGroup" transform="translate(37.725519, 142.623319) scale(1, -1) translate(-37.725519, -142.623319) "></path>
+                    <path d="M31.7255192,98 C14.7852517,98 0.941071376,113.485508 0,133 L63.4510383,133 C62.5099669,113.485508 48.6657866,98 31.7255192,98 Z M31.7255192,98" id="Top-Beak" fill="#{{ color[1] }}" sketch:type="MSShapeGroup"></path>
+                    <path d="M209,87.5 C209,160.953875 307.049634,220.5 428,220.5 C548.950366,220.5 647,160.953875 647,87.5" id="Bottom-Wing" fill="#{{ color[0] }}" sketch:type="MSShapeGroup" transform="translate(428.000000, 154.000000) rotate(-180.000000) translate(-428.000000, -154.000000) "></path>
+                    <path d="M33,124 C33,231.143247 159.255693,318 315,318 C470.744307,318 597,231.143247 597,124" id="Body" fill="#{{ color[0] }}" sketch:type="MSShapeGroup"></path>
+                    <path d="M154.5,233 C221.6026,233 276,180.841177 276,116.5 C276,52.1588235 221.6026,0 154.5,0 C87.3973996,0 33,52.1588235 33,116.5 C33,180.841177 87.3973996,233 154.5,233 Z M87.5,113 C97.1649836,113 105,105.164984 105,95.5 C105,85.8350164 97.1649836,78 87.5,78 C77.8350164,78 70,85.8350164 70,95.5 C70,105.164984 77.8350164,113 87.5,113 Z M87.5,105 C92.7467054,105 97,100.746705 97,95.5 C97,90.2532946 92.7467054,86 87.5,86 C82.2532946,86 78,90.2532946 78,95.5 C78,100.746705 82.2532946,105 87.5,105 Z M87.5,105" id="Head" fill="#{{ color[0] }}" sketch:type="MSShapeGroup"></path>
+                    <path d="M209,52 C209,125.453875 307.049634,185 428,185 C548.950366,185 647,125.453875 647,52" id="Top-Wing" fill="#{{ color[1] }}" sketch:type="MSShapeGroup"></path>
+                </g>
+            </svg>
+        </a>
+    </div>
+{% endfor %}
+
+<script src="../static/js/jquery.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+
+<script>
+    String.prototype.replaceAll = function (str1, str2, ignore) {
+        return this.replace(new RegExp(str1.replace(/([\/\,\!\\\^\$\{\}\[\]\(\)\.\*\+\?\|\<\>\-\&])/g, "\\$&"), (ignore ? "gi" : "g")), (typeof(str2) == "string") ? str2.replace(/\$/g, "$$$$") : str2);
+    };
+
+    var body_color = "334D5C";
+    var wing_color = "DF5A49";
+    var svg = $('#custom-logo');
+
+    $('#submit').click(function () {
+        var new_body_color = $('#body').val();
+        var new_wing_color = $('#wing').val();
+
+        var svg_html = svg.html();
+
+        if (new_body_color.length > 0) {
+            svg_html = svg_html.replaceAll(body_color, new_body_color);
+            body_color = new_body_color;
+        }
+
+        if (new_wing_color.length > 0) {
+            svg_html = svg_html.replaceAll(wing_color, new_wing_color);
+            wing_color = new_wing_color;
+        }
+
+        svg.html(svg_html);
+    });
+</script>
+</body>
+</html>
