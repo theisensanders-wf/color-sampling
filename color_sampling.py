@@ -4,11 +4,20 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    primary = '#' + request.args.get('primary', 'FFFFFF')
-    secondary = '#' + request.args.get('secondary', '000000')
+    primary = request.args.get('primary', '333333')
+    secondary = request.args.get('secondary', 'FFFFFF')
+    reverse = request.args.get('reverse', 'false').lower() == 'true'
 
-    print primary
-    return render_template('index.html', primary=primary, secondary=secondary)
+    primary_hex = '#' + primary
+    secondary_hex = '#' + secondary
+
+    if reverse:
+        tmp = primary
+        primary = secondary
+        secondary = tmp
+
+    return render_template('index.html', primary=primary, secondary=secondary,
+                           primary_hex=primary_hex, secondary_hex=secondary_hex)
 
 @app.route('/parakee')
 def parakee():
