@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
+
 @app.route('/')
 def index():
     primary = request.args.get('primary', '000000')
@@ -18,6 +19,7 @@ def index():
 
     return render_template('index.html', primary=primary, secondary=secondary,
                            primary_hex=primary_hex, secondary_hex=secondary_hex)
+
 
 @app.route('/parakee')
 def parakee():
