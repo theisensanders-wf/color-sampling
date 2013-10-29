@@ -27,8 +27,6 @@
         }
 
         #custom-logo-container {
-            border: 1px solid #333333;
-            border-radius: 10px;
             padding: 10px 20px;
             margin-bottom: 100px;
         }
@@ -45,7 +43,6 @@
     Body: <input type="text" id="body" placeholder="{{ colors[0][0] }}">
     Wing/Beak: <input type="text" id="wing" placeholder="DF5A49">
     <button class="btn" id="submit">Submit</button>
-
 
     <div id="custom-logo" class="logo">
         <a href="/?primary={{ colors[0][0] }}&amp;secondary={{ colors[0][1] }}">
@@ -66,6 +63,8 @@
         </a>
     </div>
 </div>
+
+<hr>
 
 <h1>Top Birds</h1>
 {% for color in colors %}
@@ -91,6 +90,7 @@
 
 <script src="../static/js/jquery.js"></script>
 <script src="../static/js/bootstrap.min.js"></script>
+<script src="../static/js/snap.svg-min.js"></script>
 
 <script>
     String.prototype.replaceAll = function (str1, str2, ignore) {
