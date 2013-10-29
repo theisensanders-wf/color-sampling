@@ -22,6 +22,7 @@ def hello_world():
 @app.route('/parakee')
 def parakee():
     colors = [
+        ['000000', '75B74B'],
         ['334D5C', 'DF5A49'],
         ['e67e22', '16828c'],
         ['A8CD1B', '005A31'],
