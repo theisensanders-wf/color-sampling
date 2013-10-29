@@ -3,9 +3,9 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 @app.route('/')
-def hello_world():
-    primary = request.args.get('primary', '046380')
-    secondary = request.args.get('secondary', 'E6E2AF')
+def index():
+    primary = request.args.get('primary', '000000')
+    secondary = request.args.get('secondary', '75B74B')
     reverse = request.args.get('reverse', 'false').lower() == 'true'
 
     primary_hex = '#' + primary
