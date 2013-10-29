@@ -12,8 +12,6 @@
     <!-- Bootstrap core CSS -->
     <link href="../static/css/bootstrap.css" rel="stylesheet">
 
-    {#    <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>#}
-    {#    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>#}
 
     <style>
         html, body {
@@ -22,36 +20,44 @@
         }
 
         body {
-            background-color: #FFFFFF;
             padding-top: 50px;
             padding-bottom: 20px;
         }
 
+            /* NAVBAR
+            -------------------------------------------------- */
+
         .navbar {
-            background-color: rgba(255, 255, 255, 0.5);
+            background-color: rgba(255, 255, 255, 0.7);
             height: 90px;
-            color: {{ primary_hex }};
-        {#            -webkit-box-shadow: 0 8px 6px -6px black;#} {#           -moz-box-shadow: 0 8px 6px -6px black;#} {#                box-shadow: 0 8px 6px -6px black;#}
         }
 
-        .navbar .navbar-brand {
-            font-size: 30px;
-            line-height: 100%;
+        .navbar a {
+            color: {{ primary_hex }};
         }
 
         .navbar .navbar-header {
             padding-top: 12px;
-            width: 50%;
+            padding-bottom: 12px;
+            font-size: 30px;
+        }
+
+        .navbar .navbar-header .navbar-brand {
+            font-size: 30px;
+        }
+
+        .navbar .navbar-header .navbar-toggle {
+            margin-top: 16px;
+            border-color: {{ primary_hex }};
+        }
+
+        .navbar .navbar-header .navbar-toggle .icon-bar {
+            background-color: {{ primary_hex }};
         }
 
         .navbar .navbar-collapse {
             padding-top: 20px;
             font-size: 20px;
-            line-height: 100%;
-        }
-
-        .navbar a {
-            color: {{ primary_hex }};
         }
 
         .navbar .navbar-brand svg {
@@ -59,22 +65,24 @@
             width: 60px;
         }
 
-        .navbar:after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -2px;
-            right: 0;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        }
-
         .navbar .navbar-brand span {
             line-height: 30px;
         }
 
-        #download {
+        @media (max-width: 768px) {
+            .navbar {
+                background-color: rgba(255, 255, 255, 1);
+            }
+
+            .navbar .navbar-collapse {
+                background-color: rgba(255, 255, 255, 1);
+            }
+
+        }
+
+        .navbar .btn {
             background-color: {{ primary_hex }};
-            color: rgba(255, 255, 255, 0.9);
+            color: #FFFFFF;
             margin-left: 15px;
             margin-top: 3px;
             padding-top: 10px;
@@ -82,16 +90,15 @@
             font-size: 20px;
         }
 
-        #content {
-            margin-top: 40px;
-            background-color: {{ secondary_hex }};
-            height: 500px;
-        }
+            /* JUMBOTRON
+            -------------------------------------------------- */
 
         .jumbotron {
-            background-color: transparent;
+            background-color: {{ secondary_hex }};
             text-align: center;
             padding-top: 100px;
+            height: 500px;
+            margin-top: 40px;
         }
 
         .jumbotron h1 {
@@ -114,7 +121,7 @@
         }
 
             /* MARKETING CONTENT
-    -------------------------------------------------- */
+            -------------------------------------------------- */
 
             /* Pad the edges of the mobile views a bit */
         .marketing {
@@ -152,7 +159,6 @@
             letter-spacing: -1px;
         }
 
-
     </style>
 </head>
 
@@ -185,12 +191,12 @@
             </a>
         </div>
         <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav navbar-right">
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="#getstarted">Getting Started</a></li>
                 <li><a href="#docs">Docs</a></li>
                 <li><a href="#demos">Demos</a></li>
-                <li><a id="download" class="btn" href="#download">Download</a></li>
+                <li class="visible-lg"><a class="btn" href="#download">Download</a></li>
             </ul>
         </div>
         <!--/.navbar-collapse -->
@@ -208,7 +214,6 @@
     </div>
 
 </div>
-<!-- /.container -->
 
 <div class="container marketing">
 
@@ -253,9 +258,6 @@
         <!-- /.col-lg-4 -->
     </div>
     <!-- /.row -->
-
-
-    <!-- START THE FEATURETTES -->
 
     <hr class="featurette-divider">
 
@@ -306,27 +308,10 @@
     </div>
 
     <hr class="featurette-divider">
-
 </div>
 
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
 <script src="../static/js/jquery.js"></script>
 <script src="../static/js/bootstrap.min.js"></script>
-<script src="../static/js/snap.svg-min.js"></script>
 
-{#<script>#}
-{#    var s = Snap(800, 600);#}
-{#    var circle = s.circle(150, 150, 100);#}
-{##}
-{#    Snap.load('../static/svg/parakee.svg', function(f) {#}
-{#        f = f.select("g");#}
-{#        s.append(f);#}
-{#        f.drag();#}
-{#    });#}
-{##}
-{#    var flight_path = s.path("M176.589844,66.9492188 C484.082031,103.554688 578.832023,306.414072 673.886719,393.414062 C768.941406,480.414062 1104.67188,484.636719 1104.67188,484.636719")#}
-{#</script>#}
 </body>
 </html>
