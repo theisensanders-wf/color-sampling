@@ -22,10 +22,6 @@
             </button>
             <a class="navbar-brand" href="#">
                 <svg viewBox="0 0 655 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-                    <title>parakee</title>
-                    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)
-                    </description>
-                    <defs></defs>
                     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
                         <path d="M40.7255192,133.623319 C30.192813,133.623319 21.5851164,142.47218 21,153.623319 L60.4510383,153.623319 C59.8659219,142.47218 51.2582253,133.623319 40.7255192,133.623319 Z M40.7255192,133.623319" id="Bottom-Beak" fill="var(--primary-color)" sketch:type="MSShapeGroup" transform="translate(40.725519, 143.623319) scale(1, -1) translate(-40.725519, -143.623319) "></path>
                         <path d="M34.7255192,99 C17.7852517,99 3.94107138,114.485508 3,134 L66.4510383,134 C65.5099669,114.485508 51.6657866,99 34.7255192,99 Z M34.7255192,99" id="Top-Beak" fill="var(--primary-color)" sketch:type="MSShapeGroup"></path>
@@ -57,7 +53,7 @@
         <h1>Project Name</h1>
 
         <p class="lead">For Sale: Parachute. Only used once, never opened.</p>
-        <a class="btn btn-large btn-primary" href="/?primary={{ secondary }}&amp;secondary={{ primary }}">Reverse
+        <a class="btn btn-large btn-primary" id="reverse-colors" href="/">Reverse
             Colors</a>
     </div>
 
@@ -158,23 +154,7 @@
     <hr class="featurette-divider">
 </div>
 
-<script>
-    let root = document.documentElement;
-    const urlParams = new URLSearchParams(window.location.search);
-
-    const primaryColor = urlParams.get('primary');
-    console.log(primaryColor);
-    if (primaryColor !== null) {
-        root.style.setProperty('--primary-color', primaryColor);
-    }
-
-    const secondaryColor = urlParams.get('secondary');
-    console.log(secondaryColor);
-    if (secondaryColor !== null) {
-        root.style.setProperty('--secondary-color', secondaryColor);
-    }
-</script>
-
+<script type="text/javascript" src="static/js/app.js"></script>
 
 </body>
 </html>
