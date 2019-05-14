@@ -5,165 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
 
     <title>Color Sampling</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="../static/css/bootstrap.css" rel="stylesheet">
-
-
-    <style>
-        html, body {
-            width: 100%;
-            height: 100%;
-        }
-
-        body {
-            padding-top: 50px;
-            padding-bottom: 20px;
-        }
-
-            /* NAVBAR
-            -------------------------------------------------- */
-
-        .navbar {
-            background-color: rgba(255, 255, 255, 0.7);
-            height: 90px;
-        }
-
-        .navbar a {
-            color: {{ primary_hex }};
-        }
-
-        .navbar .navbar-header {
-            padding-top: 12px;
-            padding-bottom: 12px;
-            font-size: 30px;
-        }
-
-        .navbar .navbar-header .navbar-brand {
-            font-size: 30px;
-        }
-
-        .navbar .navbar-header .navbar-toggle {
-            margin-top: 16px;
-            border-color: {{ primary_hex }};
-        }
-
-        .navbar .navbar-header .navbar-toggle .icon-bar {
-            background-color: {{ primary_hex }};
-        }
-
-        .navbar .navbar-collapse {
-            padding-top: 20px;
-            font-size: 20px;
-        }
-
-        .navbar .navbar-brand svg {
-            height: 30px;
-            width: 60px;
-        }
-
-        .navbar .navbar-brand span {
-            line-height: 30px;
-        }
-
-        @media (max-width: 768px) {
-            .navbar {
-                background-color: rgba(255, 255, 255, 1);
-            }
-
-            .navbar .navbar-collapse {
-                background-color: rgba(255, 255, 255, 1);
-            }
-
-        }
-
-        .navbar .btn {
-            background-color: {{ primary_hex }};
-            color: #FFFFFF;
-            margin-left: 15px;
-            margin-top: 3px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            font-size: 20px;
-        }
-
-            /* JUMBOTRON
-            -------------------------------------------------- */
-
-        .jumbotron {
-            background-color: {{ secondary_hex }};
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 70px;
-            padding-bottom: 120px;
-        }
-
-        .jumbotron h1 {
-            color: #FFFFFF;
-            font-size: 90px;
-        }
-
-        .jumbotron p {
-            color: {{ primary_hex }};
-            font-size: 30px;
-        }
-
-        .jumbotron .btn {
-            border: none;
-            padding: 10px 80px;
-            border-radius: 0;
-            background-color: {{ primary_hex }};
-            font-size: 28px;
-            color: #FFFFFF;
-        }
-
-            /* MARKETING CONTENT
-            -------------------------------------------------- */
-
-            /* Pad the edges of the mobile views a bit */
-        .marketing {
-            margin-top: 60px;
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-
-            /* Center align the text within the three columns below the carousel */
-        .marketing .col-lg-4 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .marketing h2 {
-            font-weight: normal;
-        }
-
-        .marketing .col-lg-4 p {
-            margin-left: 10px;
-            margin-right: 10px;
-        }
-
-            /* Featurettes
-            ------------------------- */
-
-        .featurette-divider {
-            margin: 80px 0; /* Space out the Bootstrap <hr> more */
-        }
-
-            /* Thin out the marketing headings */
-        .featurette-heading {
-            font-weight: 300;
-            line-height: 1;
-            letter-spacing: -1px;
-        }
-
-    </style>
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/app.css" rel="stylesheet">
 </head>
-
 <body>
-
 <div class="navbar navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
@@ -179,12 +27,12 @@
                     </description>
                     <defs></defs>
                     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-                        <path d="M40.7255192,133.623319 C30.192813,133.623319 21.5851164,142.47218 21,153.623319 L60.4510383,153.623319 C59.8659219,142.47218 51.2582253,133.623319 40.7255192,133.623319 Z M40.7255192,133.623319" id="Bottom-Beak" fill="{{ secondary_hex }}" sketch:type="MSShapeGroup" transform="translate(40.725519, 143.623319) scale(1, -1) translate(-40.725519, -143.623319) "></path>
-                        <path d="M34.7255192,99 C17.7852517,99 3.94107138,114.485508 3,134 L66.4510383,134 C65.5099669,114.485508 51.6657866,99 34.7255192,99 Z M34.7255192,99" id="Top-Beak" fill="{{ secondary_hex }}" sketch:type="MSShapeGroup"></path>
-                        <path d="M212,88.5 C212,161.953875 310.049634,221.5 431,221.5 C551.950366,221.5 650,161.953875 650,88.5" id="Bottom-Wing" fill="{{ primary_hex }}" sketch:type="MSShapeGroup" transform="translate(431.000000, 155.000000) rotate(-180.000000) translate(-431.000000, -155.000000) "></path>
-                        <path d="M36,125 C36,232.143247 162.255693,319 318,319 C473.744307,319 600,232.143247 600,125" id="Body" fill="{{ primary_hex }}" sketch:type="MSShapeGroup"></path>
-                        <ellipse d="M157.5,234 C224.6026,234 279,181.841177 279,117.5 C279,53.1588235 224.6026,1 157.5,1 C90.3973996,1 36,53.1588235 36,117.5 C36,181.841177 90.3973996,234 157.5,234 Z M157.5,234" id="Head" fill="{{ primary_hex }}" sketch:type="MSShapeGroup" cx="157.5" cy="117.5" rx="121.5" ry="116.5"></ellipse>
-                        <path d="M212,53 C212,126.453875 310.049634,186 431,186 C551.950366,186 650,126.453875 650,53" id="Top-Wing" fill="{{ secondary_hex }}" sketch:type="MSShapeGroup"></path>
+                        <path d="M40.7255192,133.623319 C30.192813,133.623319 21.5851164,142.47218 21,153.623319 L60.4510383,153.623319 C59.8659219,142.47218 51.2582253,133.623319 40.7255192,133.623319 Z M40.7255192,133.623319" id="Bottom-Beak" fill="var(--primary-color)" sketch:type="MSShapeGroup" transform="translate(40.725519, 143.623319) scale(1, -1) translate(-40.725519, -143.623319) "></path>
+                        <path d="M34.7255192,99 C17.7852517,99 3.94107138,114.485508 3,134 L66.4510383,134 C65.5099669,114.485508 51.6657866,99 34.7255192,99 Z M34.7255192,99" id="Top-Beak" fill="var(--primary-color)" sketch:type="MSShapeGroup"></path>
+                        <path d="M212,88.5 C212,161.953875 310.049634,221.5 431,221.5 C551.950366,221.5 650,161.953875 650,88.5" id="Bottom-Wing" fill="var(--secondary-color)" sketch:type="MSShapeGroup" transform="translate(431.000000, 155.000000) rotate(-180.000000) translate(-431.000000, -155.000000) "></path>
+                        <path d="M36,125 C36,232.143247 162.255693,319 318,319 C473.744307,319 600,232.143247 600,125" id="Body" fill="var(--secondary-color)" sketch:type="MSShapeGroup"></path>
+                        <ellipse d="M157.5,234 C224.6026,234 279,181.841177 279,117.5 C279,53.1588235 224.6026,1 157.5,1 C90.3973996,1 36,53.1588235 36,117.5 C36,181.841177 90.3973996,234 157.5,234 Z M157.5,234" id="Head" fill="var(--secondary-color)" sketch:type="MSShapeGroup" cx="157.5" cy="117.5" rx="121.5" ry="116.5"></ellipse>
+                        <path d="M212,53 C212,126.453875 310.049634,186 431,186 C551.950366,186 650,126.453875 650,53" id="Top-Wing" fill="var(--primary-color)" sketch:type="MSShapeGroup"></path>
                     </g>
                 </svg>
                 <span>Project Name</span>
@@ -310,8 +158,23 @@
     <hr class="featurette-divider">
 </div>
 
-<script src="../static/js/jquery.js"></script>
-<script src="../static/js/bootstrap.min.js"></script>
+<script>
+    let root = document.documentElement;
+    const urlParams = new URLSearchParams(window.location.search);
+
+    const primaryColor = urlParams.get('primary');
+    console.log(primaryColor);
+    if (primaryColor !== null) {
+        root.style.setProperty('--primary-color', primaryColor);
+    }
+
+    const secondaryColor = urlParams.get('secondary');
+    console.log(secondaryColor);
+    if (secondaryColor !== null) {
+        root.style.setProperty('--secondary-color', secondaryColor);
+    }
+</script>
+
 
 </body>
 </html>

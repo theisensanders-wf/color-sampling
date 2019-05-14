@@ -1,1 +1,0 @@
-web: gunicorn color_sampling:app

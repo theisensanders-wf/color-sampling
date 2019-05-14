@@ -1,0 +1,149 @@
+:root {
+  --primary-color: #7AC143;  /* lime green */
+  --secondary-color: #000000;  /* black */
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* NAVBAR
+-------------------------------------------------- */
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.7);
+    height: 90px;
+}
+
+.navbar a {
+    color: var(--secondary-color);
+}
+
+.navbar .navbar-header {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 30px;
+}
+
+.navbar .navbar-header .navbar-brand {
+    font-size: 30px;
+}
+
+.navbar .navbar-header .navbar-toggle {
+    margin-top: 16px;
+    border-color: var(--secondary-color);
+}
+
+.navbar .navbar-header .navbar-toggle .icon-bar {
+    background-color: var(--secondary-color);
+}
+
+.navbar .navbar-collapse {
+    padding-top: 20px;
+    font-size: 20px;
+}
+
+.navbar .navbar-brand svg {
+    height: 30px;
+    width: 60px;
+}
+
+.navbar .navbar-brand span {
+    line-height: 30px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    .navbar .navbar-collapse {
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+}
+
+.navbar .btn {
+    background-color: var(--secondary-color);
+    color: #FFFFFF;
+    margin-left: 15px;
+    margin-top: 3px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+
+/* JUMBOTRON
+-------------------------------------------------- */
+
+.jumbotron {
+    background-color: var(--primary-color);
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 70px;
+    padding-bottom: 120px;
+}
+
+.jumbotron h1 {
+    color: #FFFFFF;
+    font-size: 90px;
+}
+
+.jumbotron p {
+    color: var(--secondary-color);
+    font-size: 30px;
+}
+
+.jumbotron .btn {
+    border: none;
+    padding: 10px 80px;
+    border-radius: 0;
+    background-color: var(--secondary-color);
+    font-size: 28px;
+    color: #FFFFFF;
+}
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Pad the edges of the mobile views a bit */
+.marketing {
+    margin-top: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.marketing h2 {
+    font-weight: normal;
+}
+
+.marketing .col-lg-4 p {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+    margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -1px;
+}
