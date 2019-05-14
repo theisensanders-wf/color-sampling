@@ -23,4 +23,5 @@ root.style.setProperty('--primary-color', '#' + primaryColor);
 root.style.setProperty('--secondary-color', '#' + secondaryColor);
 
 // Set reverse color href
-document.getElementById('reverse-colors').href = "?primary=" + secondaryColor + "&secondary=" + primaryColor;
+var reverseBtn = document.getElementById('reverse-colors');
+reverseBtn.href = reverseBtn.href + "?primary=" + secondaryColor + "&secondary=" + primaryColor;
